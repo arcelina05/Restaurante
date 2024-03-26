@@ -1,0 +1,30 @@
+[
+    {
+        "producto": "haburguesa",
+        "precio": "15000"
+    },
+    {
+        "producto": "pizza",
+        "precio": "20000"
+    },
+    {
+        "producto": "malteada",
+        "precio": "10000"
+    },
+    {
+        "producto": "margarita",
+        "precio": "50000"
+    },
+    {
+        "producto": "agua con gas",
+        "precio": "5000"
+    },
+    {
+        "producto": "cerveza",
+        "precio": "8000"
+    },
+    {
+        "producto": "totopos con salsa de queso",
+        "precio": "15000"
+    }
+]

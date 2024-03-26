@@ -1,0 +1,17 @@
+[
+    {
+        "nombre": "lina",
+        "password": "lina2024",
+        "role": "admin"
+    },
+    {
+        "nombre": "cocina1",
+        "password": "cocina2024",
+        "role": "cocina"
+    },
+    {
+        "nombre": "Julian",
+        "password": "julian2024",
+        "role": "mesero"
+    }
+]
