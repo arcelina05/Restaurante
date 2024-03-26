@@ -1,30 +1,42 @@
 [
-    {
-        "producto": "haburguesa",
-        "precio": "15000"
-    },
-    {
-        "producto": "pizza",
-        "precio": "20000"
-    },
-    {
-        "producto": "malteada",
-        "precio": "10000"
-    },
-    {
-        "producto": "margarita",
-        "precio": "50000"
-    },
-    {
-        "producto": "agua con gas",
-        "precio": "5000"
-    },
-    {
-        "producto": "cerveza",
-        "precio": "8000"
-    },
-    {
-        "producto": "totopos con salsa de queso",
-        "precio": "15000"
-    }
+  {
+    "id": 1,
+    "nombre": "haburguesa",
+    "precio": "15000"
+  },
+  {
+    "id": 2,
+    "nombre": "pizza",
+    "precio": "20000"
+  },
+  {
+    "id": 3,
+    "nombre": "malteada",
+    "precio": "10000"
+  },
+  {
+    "id": 4,
+    "nombre": "margarita",
+    "precio": "50000"
+  },
+  {
+    "id": 5,
+    "nombre": "agua con gas",
+    "precio": "5000"
+  },
+  {
+    "id": 6,
+    "nombre": "cerveza",
+    "precio": "8000"
+  },
+  {
+    "id": 7,
+    "nombre": "totopos con salsa de queso",
+    "precio": "15000"
+  },
+  {
+    "nombre": "pizza hawaiana",
+    "precio": "5000",
+    "id": 8
+  }
 ]
