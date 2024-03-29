@@ -65,5 +65,73 @@
         "precio": "15000"
       }
     ]
+  },
+  {
+    "estado": "procesando",
+    "mesa": "2",
+    "mesero": "",
+    "pedido": [
+      {
+        "id": 4,
+        "nombre": "margarita",
+        "cantidad": 2,
+        "precio": "50000"
+      },
+      {
+        "id": 1,
+        "nombre": "haburguesa",
+        "cantidad": 1,
+        "precio": "150"
+      },
+      {
+        "id": 2,
+        "nombre": "pizza",
+        "cantidad": 1,
+        "precio": "20000"
+      }
+    ],
+    "id": 5
+  },
+  {
+    "estado": "procesando",
+    "mesa": "1",
+    "mesero": "",
+    "total": 29600,
+    "pedido": [
+      {
+        "id": 1,
+        "nombre": "haburguesa",
+        "cantidad": 4,
+        "precio": "150"
+      },
+      {
+        "id": 6,
+        "nombre": "cerveza",
+        "cantidad": 3,
+        "precio": "8000"
+      },
+      {
+        "id": 5,
+        "nombre": "agua con gas",
+        "cantidad": 1,
+        "precio": "5000"
+      }
+    ],
+    "id": 6
+  },
+  {
+    "estado": "procesando",
+    "mesa": "4",
+    "mesero": "Julian",
+    "total": 12000,
+    "pedido": [
+      {
+        "id": 12,
+        "nombre": "pizza dos ingredientes",
+        "cantidad": 1,
+        "precio": "12000"
+      }
+    ],
+    "id": 7
   }
 ]

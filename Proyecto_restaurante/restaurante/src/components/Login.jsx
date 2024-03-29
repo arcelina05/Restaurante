@@ -17,13 +17,13 @@ const Login = ({ callback }) => {
             .then(res => res.json())
             .then(responseData => {
                 if (responseData.role == "admin") {
-                    callback("admin");
+                    callback(responseData);
                     goTo("/adminHome");
                 } else if (responseData.role == "mesero") {
-                    callback("mesero");
+                    callback(responseData);
                     goTo("/meseroHome");
                 } else if (responseData, role == "cocina") {
-                    callback("cocina1");
+                    callback(responseData);
                     goTo("/cocinaHome");
                 }
             })
