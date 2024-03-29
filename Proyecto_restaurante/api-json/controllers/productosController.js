@@ -59,8 +59,29 @@ const actualizarProducto = async (req, res)=>{
     }
 }
 
+const eliminarProducto = async (req, res) => {
+    const { id } = req.params;
+
+    const productos = await fs.readFile(path.join(__dirname, '../db/productos.json'));
+    let productosJson = JSON.parse(productos);
+
+    // Buscar y eliminar el producto con el ID proporcionado
+    const indiceProducto = productosJson.findIndex(producto => producto.id == id);
+    
+    if (indiceProducto !== -1) {
+        productosJson.splice(indiceProducto, 1); // Eliminar el producto del arreglo
+        // Escribir el archivo JSON con los productos actualizados
+        await fs.writeFile(path.join(__dirname, '../db/productos.json'), JSON.stringify(productosJson, null, 2), { encoding: 'utf-8' });
+        res.json({ mensaje: "Producto eliminado correctamente" });
+    } else {
+        res.json({ mensaje: "No se ha encontrado el producto" });
+    }
+};
+
+
 module.exports = {
     crearProducto,
     actualizarProducto,
+    eliminarProducto,
     listarProductos
 }

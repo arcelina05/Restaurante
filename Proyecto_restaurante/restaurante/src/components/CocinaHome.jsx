@@ -3,7 +3,7 @@ import './styles/CocinaHome.css'
     
 
 function CocinaHome() {
-    if(user!=="cocina1" || !user){
+    if(user!=="cocina" || !user){
         return <Navigate to="/"/>
     }
   return (

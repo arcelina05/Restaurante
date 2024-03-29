@@ -69,10 +69,30 @@ const actualizarUsuario = async (req, res)=>{
     }
 }
 
+const eliminarUsuario = async (req, res) => {
+    const { id } = req.params;
+
+    const usuarios = await fs.readFile(path.join(__dirname, '../db/usuarios.json'));
+    let usuariosJson = JSON.parse(usuarios);
+
+    // Buscar y eliminar el usuario con el ID proporcionado
+    const indiceUsuario = usuariosJson.findIndex(usuario => usuario.id == id);
+    
+    if (indiceUsuario !== -1) {
+        usuariosJson.splice(indiceUsuario, 1); // Eliminar el usuario del arreglo
+        // Escribir el archivo JSON con los usuarios actualizados
+        await fs.writeFile(path.join(__dirname, '../db/usuarios.json'), JSON.stringify(usuariosJson, null, 2), { encoding: 'utf-8' });
+        res.json({ mensaje: "Usuario eliminado correctamente" });
+    } else {
+        res.json({ mensaje: "No se ha encontrado el usuario" });
+    }
+};
+
 
 module.exports = {
     login,
     crearUsuario,
     actualizarUsuario,
+    eliminarUsuario,
     listarUsuarios
 }

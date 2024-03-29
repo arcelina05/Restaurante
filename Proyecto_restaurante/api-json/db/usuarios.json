@@ -1,20 +1,20 @@
 [
-    {
-        "id": 1,
-        "nombre": "lina",
-        "password": "lina2024",
-        "role": "admin"
-    },
-    {
-        "id": 2,
-        "nombre": "cocina1",
-        "password": "cocina2024",
-        "role": "cocina"
-    },
-    {
-        "id": 3,
-        "nombre": "Julian",
-        "password": "julian2024",
-        "role": "mesero"
-    }
+  {
+    "id": 1,
+    "nombre": "lina",
+    "password": "lina2024",
+    "role": "admin"
+  },
+  {
+    "id": 2,
+    "nombre": "cocina1",
+    "password": "cocina202477",
+    "role": "cocina"
+  },
+  {
+    "id": 3,
+    "nombre": "Julian",
+    "password": "julian2024",
+    "role": "mesero"
+  }
 ]

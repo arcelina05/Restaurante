@@ -2,7 +2,7 @@
   {
     "id": 1,
     "nombre": "haburguesa",
-    "precio": "15000"
+    "precio": "150"
   },
   {
     "id": 2,
@@ -11,7 +11,7 @@
   },
   {
     "id": 3,
-    "nombre": "malteada",
+    "nombre": "malteadas",
     "precio": "10000"
   },
   {
@@ -38,5 +38,20 @@
     "nombre": "pizza hawaiana",
     "precio": "5000",
     "id": 8
+  },
+  {
+    "nombre": "nombre 1",
+    "precio": "212",
+    "id": 9
+  },
+  {
+    "nombre": "pizza hawaiana",
+    "precio": "12000",
+    "id": 11
+  },
+  {
+    "nombre": "pizza dos ingredientes",
+    "precio": "12000",
+    "id": 12
   }
 ]
