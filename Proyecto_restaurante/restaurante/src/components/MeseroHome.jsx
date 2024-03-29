@@ -3,9 +3,9 @@ import './styles/UserHome.css';
 import { useEffect, useState } from "react";
 
 function MeseroHome({ user }) {
-    // if (user.role !== "mesero" || !user.role) {
-    //     return <Navigate to="/" />
-    // }
+    if (user.role !== "mesero" || !user.role) {
+        return <Navigate to="/" />
+    }
     const home = useNavigate();
     const [productos, setProductos] = useState([])
     const [productoSeleccionado, setProductoSeleccionado] = useState([])

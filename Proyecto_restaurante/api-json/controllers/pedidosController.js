@@ -8,7 +8,7 @@ const listarPedidos = async (req,res) => {
     const pedidos = await fs.readFile(path.join(__dirname,'../db/pedidos.json'));
     const pedidosJson= JSON.parse(pedidos);
 
-    res.json(pedidosJson);
+    res.json(pedidosJson.filter(pedido => pedido.estado == "procesando"));
 } 
 
 const crearPedido = async (req, res)=>{
@@ -46,6 +46,7 @@ const actualizarEstadoPedido = async (req, res)=>{
     const pedido = pedidosJson.find(pedido => pedido.id == id);
     
     pedido.estado = estado;
+
     await fs.writeFile(path.join(__dirname,'../db/pedidos.json'), JSON.stringify(pedidosJson, null, 2), {encoding: 'utf-8'})
     res.json({mensaje:"pedido  actualizado"});
 

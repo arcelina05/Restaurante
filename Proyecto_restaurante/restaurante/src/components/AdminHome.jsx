@@ -3,7 +3,7 @@ import './styles/AdminHome.css'
 import { useEffect, useState } from "react";
 
 function AdminHome({ user }) {
-    if (user !== 'admin' || !user) {
+    if (user.role !== 'admin' || !user.role) {
         return <Navigate to="/" />
     }
     const home = useNavigate();

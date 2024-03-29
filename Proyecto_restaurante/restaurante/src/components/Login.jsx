@@ -22,7 +22,7 @@ const Login = ({ callback }) => {
                 } else if (responseData.role == "mesero") {
                     callback(responseData);
                     goTo("/meseroHome");
-                } else if (responseData, role == "cocina") {
+                } else if (responseData.role == "cocina") {
                     callback(responseData);
                     goTo("/cocinaHome");
                 }
