@@ -6,7 +6,7 @@
   },
   {
     "id": 2,
-    "nombre": "pizza",
+    "nombre": "pizza con pollo",
     "precio": "20000"
   },
   {
@@ -38,16 +38,6 @@
     "nombre": "pizza hawaiana",
     "precio": "5000",
     "id": 8
-  },
-  {
-    "nombre": "nombre 1",
-    "precio": "212",
-    "id": 9
-  },
-  {
-    "nombre": "pizza hawaiana",
-    "precio": "12000",
-    "id": 11
   },
   {
     "nombre": "pizza dos ingredientes",

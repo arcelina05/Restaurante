@@ -25,5 +25,53 @@
       }
     ],
     "id": 1
+  },
+  {
+    "estado": "listo",
+    "mesa": "1",
+    "mesero": "Julian",
+    "total": 95000,
+    "pedido": [
+      {
+        "id": 2,
+        "nombre": "pizza con pollo",
+        "cantidad": 2,
+        "precio": "20000"
+      },
+      {
+        "id": 4,
+        "nombre": "margarita",
+        "cantidad": 1,
+        "precio": "50000"
+      },
+      {
+        "id": 5,
+        "nombre": "agua con gas",
+        "cantidad": 1,
+        "precio": "5000"
+      }
+    ],
+    "id": 2
+  },
+  {
+    "estado": "listo",
+    "mesa": "3",
+    "mesero": "Julian",
+    "total": 34000,
+    "pedido": [
+      {
+        "id": 3,
+        "nombre": "malteadas",
+        "cantidad": 1,
+        "precio": "10000"
+      },
+      {
+        "id": 6,
+        "nombre": "cerveza",
+        "cantidad": 3,
+        "precio": "8000"
+      }
+    ],
+    "id": 3
   }
 ]
