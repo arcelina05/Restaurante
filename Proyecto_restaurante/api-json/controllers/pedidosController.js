@@ -14,14 +14,14 @@ const listarPedidos = async (req,res) => {
 const crearPedido = async (req, res)=>{
     const nuevoPedido= req.body
 
-    //consultar el ultimo id insertado en el json para seguir el consecutivo
+    //consulta el ultimo id insertado en el json para seguir el consecutivo
     const pedidos = await fs.readFile(path.join(__dirname,'../db/pedidos.json'));
     const pedidosJson= JSON.parse(pedidos);
 
-    //consultar el tañamo del json para saber si tiene elementos ya insertados
+    //consulta el tañamo del json para saber si tiene elementos ya insertados
     let ultimoId = 0;
     if(pedidosJson.length > 0){
-        //obtenemos la el producto q esta en al ultima posicion
+        //obtenemos el producto q esta en al ultima posicion
         const ultimoPedido =pedidosJson[pedidosJson.length - 1];
         //obtenemos el id y le sumamos 1
         ultimoId = ultimoPedido.id+1; 

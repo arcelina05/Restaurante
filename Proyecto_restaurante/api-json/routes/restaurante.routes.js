@@ -16,7 +16,7 @@ router
     .get('/productos/listar', productosController.listarProductos)
     .post('/productos/crear-producto', productosController.crearProducto)
     .put('/productos/actualizar-producto/:id', productosController.actualizarProducto)
-    .delete('/productos/eliminar-producto/:id', productosController.eliminarProducto) // Corregido
+    .delete('/productos/eliminar-producto/:id', productosController.eliminarProducto)
     // Rutas para pedidos
     .get('/pedidos/listar', pedidosController.listarPedidos)
     .post('/pedidos/crear-pedido', pedidosController.crearPedido)

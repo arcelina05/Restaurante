@@ -136,7 +136,7 @@ function AdminHome({ user }) {
     const enviarDatosUsuario = async (e) => {
         e.preventDefault();
 
-        // Como se utiliza la misma funcion para crear y actualziar se hace una validacion para saber a que ruta tiene que apuntar cuando se enviar
+        // se hace una validacion para saber a que ruta tiene que apuntar cuando se enviar ya que se usa la misma funcion para crear y acrualizar
         let ruta_post = `http://localhost:4000/v1/restaurante/usuarios/crear-usuario`;
         let method = 'POST';
         if (accionUsuario == 'actualizar') {
@@ -144,7 +144,7 @@ function AdminHome({ user }) {
             method = 'PUT';
         }
 
-        let datosProducto = {
+        let datosUsuario = {
             nombre: nombres,
             password: password,
             role: rol
@@ -152,7 +152,7 @@ function AdminHome({ user }) {
 
         fetch(ruta_post, {
             'method': method,
-            'body': JSON.stringify(datosProducto),
+            'body': JSON.stringify(datosUsuario),
             'headers': {
                 'Content-Type': 'application/json'
             }
@@ -162,7 +162,7 @@ function AdminHome({ user }) {
             .then((response) => {
                 setMensaje(response.mensaje)
                 cargarUsuarios()
-                // limpiar campos despues de actualizar
+                // limpio los campos despues de actualizar
                 setNombres("")
                 setPassword("")
                 setRol("")
@@ -178,7 +178,7 @@ function AdminHome({ user }) {
     }
 
 
-    // Se utiliza para cargar los productos,usuarios y ventas despues de haberse renderizado el componente
+    // carga los productos,usuarios y ventas despues de haberse renderizado el componente
     useEffect(() => {
         cargarProductos();
         cargarUsuarios();

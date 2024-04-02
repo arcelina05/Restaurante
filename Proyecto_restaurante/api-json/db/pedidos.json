@@ -73,5 +73,77 @@
       }
     ],
     "id": 3
+  },
+  {
+    "estado": "listo",
+    "mesa": "1",
+    "mesero": "julian",
+    "total": 30000,
+    "pedido": [
+      {
+        "id": 3,
+        "nombre": "malteadas",
+        "cantidad": 3,
+        "precio": "10000"
+      }
+    ],
+    "id": 4
+  },
+  {
+    "estado": "procesando",
+    "mesa": "2",
+    "mesero": "julian",
+    "total": 180000,
+    "pedido": [
+      {
+        "id": 2,
+        "nombre": "pizza con pollo",
+        "cantidad": 4,
+        "precio": "20000"
+      },
+      {
+        "id": 4,
+        "nombre": "margarita",
+        "cantidad": 2,
+        "precio": "50000"
+      }
+    ],
+    "id": 5
+  },
+  {
+    "estado": "listo",
+    "mesa": "4",
+    "mesero": "julian",
+    "total": 10000,
+    "pedido": [
+      {
+        "id": 5,
+        "nombre": "agua con gas",
+        "cantidad": 2,
+        "precio": "5000"
+      }
+    ],
+    "id": 6
+  },
+  {
+    "estado": "listo",
+    "mesa": "4",
+    "mesero": "julian",
+    "total": 46000,
+    "pedido": [
+      {
+        "id": 12,
+        "nombre": "pizza zamba",
+        "cantidad": 3,
+        "precio": "12000"
+      },
+      {
+        "id": 3,
+        "nombre": "malteadas",
+        "cantidad": 1,
+        "precio": "10000"
+      }
+    ],
+    "id": 7
   }
 ]

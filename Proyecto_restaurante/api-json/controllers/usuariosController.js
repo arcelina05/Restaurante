@@ -23,11 +23,11 @@ const listarUsuarios = async (req,res) => {
 const crearUsuario = async (req, res)=>{
     const nuevoUsuario= req.body
 
-    //consultar el ultimo id insertado en el json para seguir el consecutivo
+    //consulta el ultimo id insertado en el json para seguir el consecutivo
     const usuarios = await fs.readFile(path.join(__dirname,'../db/usuarios.json'));
     const usuariosJson= JSON.parse(usuarios);
 
-    //consultar el tañamo del json para saber si tiene elementos ya insertados
+    //consulta el tañamo del json para saber si tiene elementos ya insertados
     let ultimoId = 0;
     if(usuariosJson.length > 0){
     
@@ -38,10 +38,10 @@ const crearUsuario = async (req, res)=>{
 
     nuevoUsuario.id = ultimoId;
 
-    //insertar el nuevo usuario en el arreglo de usuarios
+    //inserta el nuevo usuario en el arreglo de usuarios
     usuariosJson.push(nuevoUsuario);
 
-    //escribir el archivo json con los nuevos usuarios actualizado
+    //escribe en  el archivo json con los nuevos usuarios actualizado
     await fs.writeFile(path.join(__dirname,'../db/usuarios.json'), JSON.stringify(usuariosJson, null, 2), {encoding: 'utf-8'})
     
     res.json({mensaje:"usuario creado"});
@@ -54,14 +54,14 @@ const actualizarUsuario = async (req, res)=>{
     const usuarios = await fs.readFile(path.join(__dirname,'../db/usuarios.json'));
     const usuariosJson= JSON.parse(usuarios);
 
-    //Buscar y obtener en que posicion se encuentra el usuario que se va a actualizar
+    //Busca y obtiene en que posicion se encuentra el usuario que se va a actualizar
     const indiceUsuario = usuariosJson.findIndex(usuario => usuario.id == id);
     
     // si el indice es diferente de -1 quiere decir que encontro el usuario
     if(indiceUsuario != -1 ){
         usuariosJson[indiceUsuario] = {...usuariosJson[indiceUsuario], ...nuevosDatosUsuario};
 
-        //escribir el archivo json con los nuevos usuarios actualizado
+        //escribe en el archivo json los nuevos usuarios actualizado
         await fs.writeFile(path.join(__dirname,'../db/usuarios.json'), JSON.stringify(usuariosJson, null, 2), {encoding: 'utf-8'})
         res.json({mensaje:"usuario  actualizado"});
     }else{
@@ -75,12 +75,12 @@ const eliminarUsuario = async (req, res) => {
     const usuarios = await fs.readFile(path.join(__dirname, '../db/usuarios.json'));
     let usuariosJson = JSON.parse(usuarios);
 
-    // Buscar y eliminar el usuario con el ID proporcionado
+    // Busca y elimina el usuario con el ID proporcionado
     const indiceUsuario = usuariosJson.findIndex(usuario => usuario.id == id);
     
     if (indiceUsuario !== -1) {
-        usuariosJson.splice(indiceUsuario, 1); // Eliminar el usuario del arreglo
-        // Escribir el archivo JSON con los usuarios actualizados
+        usuariosJson.splice(indiceUsuario, 1); // Elimina el usuario del arreglo
+        // Escribe en el archivo JSON  los usuarios actualizados
         await fs.writeFile(path.join(__dirname, '../db/usuarios.json'), JSON.stringify(usuariosJson, null, 2), { encoding: 'utf-8' });
         res.json({ mensaje: "Usuario eliminado correctamente" });
     } else {

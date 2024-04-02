@@ -39,16 +39,16 @@ function MeseroHome({ user }) {
         e.preventDefault();
         let producto = productos.find(p => p.id == productoSeleccionado);
 
-        // Comprobar si el producto ya está en la lista de productos seleccionados
+        // Comprobamos si el producto ya está en la lista de productos seleccionados
         const productoExistenteIndex = productosSeleccionados.findIndex(p => p.id === producto.id);
 
         if (productoExistenteIndex !== -1) {
-            // Si el producto ya está en la lista, aumentar la cantidad según la cantidad seleccionada
+            // Si el producto ya está en la lista, aumentamos la cantidad según la cantidad seleccionada
             const updatedProductosSeleccionados = [...productosSeleccionados];
             updatedProductosSeleccionados[productoExistenteIndex].cantidad += parseInt(cantidad); // Aumentar según la cantidad seleccionada
             setProductosSeleccionados(updatedProductosSeleccionados);
         } else {
-            // Si el producto no está en la lista, agregarlo como nuevo con la cantidad seleccionada
+            // Si el producto no está en la lista, lo agregamos como nuevo con la cantidad seleccionada
             let dataProducto = {
                 id: producto.id,
                 nombre: producto.nombre,
@@ -103,7 +103,7 @@ function MeseroHome({ user }) {
     }
 
     const disminuirCantidadProducto = (id) => {
-        // Buscar el índice del producto en la lista de productos seleccionados
+        // Busca el índice del producto en la lista de productos seleccionados
         const productoIndex = productosSeleccionados.findIndex(p => p.id === id);
 
         // Verificar si el producto está en la lista
@@ -114,7 +114,7 @@ function MeseroHome({ user }) {
                 updatedProductosSeleccionados[productoIndex].cantidad -= 1;
                 setProductosSeleccionados(updatedProductosSeleccionados);
             } else {
-                // Si la cantidad es 1, eliminar el producto de la lista
+                // Si la cantidad es 1, elimina el producto de la lista
                 updatedProductosSeleccionados.splice(productoIndex, 1);
                 setProductosSeleccionados(updatedProductosSeleccionados);
             }
@@ -128,7 +128,7 @@ function MeseroHome({ user }) {
         setTotalPedido(0); // Reiniciar el total del pedido cuando se carguen nuevos productos
     }, []);
 
-    // Este efecto se ejecutará cada vez que productosSeleccionados se actualice
+    // Este efecto se ejecuta cada vez que productosSeleccionados se actualice
     useEffect(() => {
         calcularTotalPedido();
     }, [productosSeleccionados]);

@@ -20,7 +20,7 @@ const crearProducto = async (req, res)=>{
     //consultar el tañamo del json para saber si tiene elementos ya insertados
     let ultimoId = 0;
     if(productosJson.length > 0){
-        //obtenemos la el producto q esta en al ultima posicion
+        //obtenemos  el producto q esta en al ultima posicion
         const ultimoProducto =productosJson[productosJson.length - 1];
         //obtenemos el id y le sumamos 1
         ultimoId = ultimoProducto.id+1; 
