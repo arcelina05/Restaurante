@@ -48,7 +48,7 @@ function AdminHome({ user }) {
 
     // Eliminar producto
     const eliminarProducto = async (producto) => {
-        fetch(`http://localhost:4000/v1/restaurante/productos/eliminar-producto/${producto.id}`, {
+        fetch(`http://localhost:4000/v1/restaurante/productos/eliminar-producto/${producto._id}`, {
             'method': 'DELETE',
             'headers': {
                 'Content-Type': 'application/json'
@@ -70,7 +70,7 @@ function AdminHome({ user }) {
         let ruta_post = `http://localhost:4000/v1/restaurante/productos/crear-producto`;
         let method = 'POST';
         if (accionProducto == 'actualizar') {
-            ruta_post = `http://localhost:4000/v1/restaurante/productos/actualizar-producto/${productoSeleccionado.id}`;
+            ruta_post = `http://localhost:4000/v1/restaurante/productos/actualizar-producto/${productoSeleccionado._id}`;
             method = 'PUT';
         }
 
@@ -119,7 +119,7 @@ function AdminHome({ user }) {
         setAccionUsuario("actualizar")
     }
     const eliminarUsuario = async (usuario) => {
-        fetch(`http://localhost:4000/v1/restaurante/usuarios/eliminar-usuario/${usuario.id}`, {
+        fetch(`http://localhost:4000/v1/restaurante/usuarios/eliminar-usuario/${usuario._id}`, {
             'method': 'DELETE',
             'headers': {
                 'Content-Type': 'application/json'
@@ -140,7 +140,7 @@ function AdminHome({ user }) {
         let ruta_post = `http://localhost:4000/v1/restaurante/usuarios/crear-usuario`;
         let method = 'POST';
         if (accionUsuario == 'actualizar') {
-            ruta_post = `http://localhost:4000/v1/restaurante/usuarios/actualizar-usuario/${usuarioSeleccionado.id}`;
+            ruta_post = `http://localhost:4000/v1/restaurante/usuarios/actualizar-usuario/${usuarioSeleccionado._id}`;
             method = 'PUT';
         }
 
